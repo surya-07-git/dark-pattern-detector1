@@ -1,0 +1,29 @@
+text,label
+late checkout surcharge $8.50 service handling fee.,hidden_costs
+thank you for your order! your receipt and tracking number have been sent to your email.,legitimate
+full refund guarantee if returned in original condition within 14 days of receipt.,legitimate
+mandatory gratuity and service fee of 18% automatically added.,hidden_costs
+dont wait! flash discount disappears in 0830.,false_urgency
+merchant security transaction fee $2.50 added to invoice.,hidden_costs
+deal ends soon! grab it before the timer runs out.,false_urgency
+pre-selected checkbox enroll in monthly mystery surprise crate program.,preselected_options
+pre-checked option add travel insurance policy to protect your itinerary for $28.,preselected_options
+"i dont like free rewards, keep the cash back.",confirmshaming
+pre-checked checkbox add 2-year accidental damage protection for $19.99.,preselected_options
+peak hours checkout surcharge $5.50 added to subtotal.,hidden_costs
+ill pass on this deal because i dont like discounts.,confirmshaming
+26 shoppers currently have this exact product in their cart.,scarcity_claims
+care instructions store in a cool dry place away from direct sunlight.,legitimate
+your payment method will be charged quarterly until termination is approved.,forced_continuity
+"act now, only 1 ticket left at this special fare!",scarcity_claims
+"no thanks, i prefer paying extra for everything.",confirmshaming
+continuous enrollment your card will be charged regular rate upon trial expiry.,forced_continuity
+pre-checked option add protective screen shield accessory for $12.00.,preselected_options
+"trial period ends in 14 days, followed by automated recurring billing of $39.99.",forced_continuity
+selling out fast! over 500 people bought this in the past 24 hours.,scarcity_claims
+supply is limited. only 5 items available per customer.,scarcity_claims
+select your preferred delivery date and time window from the dropdown menu.,legitimate
+hurry! sale ends in 04 minutes and 12 seconds. dont miss out!,false_urgency
+flash sale countdown only 10 minutes left to claim 50% discount.,false_urgency
+"no, i dont want free shipping, id rather pay extra fees.",confirmshaming
+"by clicking start trial, you enroll in auto-renewal at standard monthly rates.",forced_continuity

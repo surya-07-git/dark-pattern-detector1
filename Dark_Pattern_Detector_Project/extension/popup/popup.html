@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Pattern Detector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Top Header Bar -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo-wrapper">
+          <svg class="shield-logo" viewBox="0 0 24 24">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+          </svg>
+          <span class="status-dot" id="statusDot"></span>
+        </div>
+        <div>
+          <h1 class="app-title">Dark Pattern Detector</h1>
+          <span class="status-label" id="statusLabel">Protected</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="rescanBtn" class="btn-icon" title="Rescan this page" aria-label="Rescan page">
+          <svg viewBox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+        </button>
+        <button id="privacyBtn" class="btn-icon" title="Privacy & Security info" aria-label="Privacy Information">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="app-main" id="mainContent">
+
+      <!-- Summary Metrics Bar -->
+      <section class="summary-card" id="summaryCard">
+        <div class="summary-metric">
+          <span class="metric-number" id="totalCount">0</span>
+          <span class="metric-title">Potential Findings</span>
+        </div>
+        <div class="summary-breakdown">
+          <div class="breakdown-item" title="High Severity">
+            <span class="dot dot-high"></span>
+            <span class="count-high" id="countHigh">0</span> High
+          </div>
+          <div class="breakdown-item" title="Medium Severity">
+            <span class="dot dot-med"></span>
+            <span class="count-med" id="countMed">0</span> Medium
+          </div>
+          <div class="breakdown-item" title="Low Severity">
+            <span class="dot dot-low"></span>
+            <span class="count-low" id="countLow">0</span> Low
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Filter Tabs -->
+      <nav class="filter-nav" aria-label="Category filters" id="filterNav">
+        <button class="filter-chip active" data-category="all">All (<span id="chipAllCount">0</span>)</button>
+        <button class="filter-chip" data-category="False Urgency">Urgency</button>
+        <button class="filter-chip" data-category="Scarcity Claims">Scarcity</button>
+        <button class="filter-chip" data-category="Confirmshaming">Shaming</button>
+        <button class="filter-chip" data-category="Forced Continuity">Continuity</button>
+        <button class="filter-chip" data-category="Hidden Costs">Hidden Costs</button>
+        <button class="filter-chip" data-category="Preselected Options">Preselected</button>
+      </nav>
+
+      <!-- Findings List -->
+      <section class="findings-list" id="findingsList" aria-live="polite">
+        <!-- Injected dynamically by popup.js -->
+      </section>
+
+      <!-- Empty State (No patterns detected) -->
+      <section class="state-container empty-state" id="emptyState" style="display: none;">
+        <div class="state-icon check-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <h2 class="state-title">No Dark Patterns Detected</h2>
+        <p class="state-desc">This webpage appears transparent and free from manipulative design patterns.</p>
+        <button class="btn-secondary" id="emptyRescanBtn">Run Deep Scan</button>
+      </section>
+
+      <!-- Loading State -->
+      <section class="state-container loading-state" id="loadingState" style="display: none;">
+        <div class="radar-spinner"></div>
+        <h2 class="state-title">Analyzing Page Elements...</h2>
+        <p class="state-desc">Evaluating DOM heuristics and running local NLP classifier.</p>
+      </section>
+
+      <!-- Unsupported / Protected Page State -->
+      <section class="state-container unsupported-state" id="unsupportedState" style="display: none;">
+        <div class="state-icon warn-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
+        </div>
+        <h2 class="state-title">Restricted Browser Page</h2>
+        <p class="state-desc" id="unsupportedReason">Chrome security policies prevent extensions from running on browser internal pages or webstore URLs.</p>
+      </section>
+
+      <!-- Error State -->
+      <section class="state-container error-state" id="errorState" style="display: none;">
+        <div class="state-icon error-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        </div>
+        <h2 class="state-title">Scan Interrupted</h2>
+        <p class="state-desc" id="errorMessage">Unable to communicate with the active tab. Try reloading the webpage.</p>
+        <button class="btn-primary" id="retryBtn">Retry Scan</button>
+      </section>
+
+    </main>
+
+    <!-- Privacy & Architecture Modal -->
+    <div class="modal-backdrop" id="privacyModal" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h2 class="modal-title">Privacy & Security Transparency</h2>
+          <button class="modal-close" id="modalCloseBtn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="privacy-callout">
+            <strong>100% Local Inference & Privacy:</strong> All heuristic rules and ML text classification run directly on your computer inside this browser tab. Zero data is ever sent to external servers.
+          </div>
+          <h3>What We Analyze:</h3>
+          <ul>
+            <li>Visible text content in public paragraphs and buttons.</li>
+            <li>DOM attributes (such as countdown timer markup or pre-checked checkboxes).</li>
+          </ul>
+          <h3>What We NEVER Access:</h3>
+          <ul>
+            <li>Passwords, login credentials, or authentication tokens.</li>
+            <li>Credit card numbers, CVVs, or payment details.</li>
+            <li>Browsing history or cookies from other tabs.</li>
+          </ul>
+          <h3>Ethical Non-Interference:</h3>
+          <p>This extension only informs and highlights. It never automatically cancels subscriptions, modifies shopping carts, or changes checkout selections.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer Bar -->
+    <footer class="app-footer">
+      <span class="engine-badge" id="engineBadge">Hybrid Engine (Heuristic + SVM ML)</span>
+      <button class="btn-link" id="clearHighlightsBtn">Clear Highlights</button>
+    </footer>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

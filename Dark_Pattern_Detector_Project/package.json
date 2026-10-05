@@ -1,0 +1,24 @@
+{
+  "name": "dark-pattern-detector",
+  "version": "1.0.0",
+  "description": "Manifest V3 Chrome Extension to detect e-commerce dark patterns using DOM heuristics and explainable in-browser ML.",
+  "scripts": {
+    "test": "node test_pages/test_rules.js && node test_pages/test_ml_inference.js && node test_pages/test_integration.js",
+    "test:rules": "node test_pages/test_rules.js",
+    "test:ml": "node test_pages/test_ml_inference.js",
+    "test:integration": "node test_pages/test_integration.js"
+  },
+  "keywords": [
+    "dark-patterns",
+    "chrome-extension",
+    "manifest-v3",
+    "machine-learning",
+    "heuristics",
+    "cybersecurity"
+  ],
+  "author": "B.Tech Student",
+  "license": "MIT",
+  "devDependencies": {
+    "jsdom": "^30.1.2"
+  }
+}

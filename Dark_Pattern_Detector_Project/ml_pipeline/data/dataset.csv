@@ -1,0 +1,141 @@
+text,label
+"Hurry! Sale ends in 04 minutes and 12 seconds. Don't miss out!",false_urgency
+"Flash sale countdown: Only 10 minutes left to claim 50% discount.",false_urgency
+"Act now! Price goes up in 15 minutes.",false_urgency
+"Order within the next 20 minutes to lock in this special promotional price!",false_urgency
+"Time is running out! Midnight deal expires very soon.",false_urgency
+"Your reserved basket will be released in 05:00 minutes!",false_urgency
+"Limited time flash offer! Claim your voucher before the clock hits zero.",false_urgency
+"Hurry up! Final markdown ends tonight at midnight.",false_urgency
+"Only 2 hours remaining to take advantage of today's mega deal!",false_urgency
+"Quick! Grab this one-time offer before time expires.",false_urgency
+"Prices valid for the next 10 minutes only.",false_urgency
+"Deal ends soon! Grab it before the timer runs out.",false_urgency
+"Act fast! Only valid for bookings made in the next 15 minutes.",false_urgency
+"Tick tock! Your exclusive discount is expiring in 3 minutes.",false_urgency
+"Last chance! Offer disappears once this timer hits zero.",false_urgency
+"Hurry! 3 other customers are looking at this time-sensitive deal.",false_urgency
+"Claim your free gift before the countdown finishes.",false_urgency
+"Don't wait! Flash discount disappears in 08:30.",false_urgency
+"Special promotional pricing valid for 12 more minutes only.",false_urgency
+"Warning: This low rate will expire in 03:45.",false_urgency
+"Only 2 items left in stock. Order now before it's gone!",scarcity_claims
+"Almost sold out! Only 1 room left at this price on our site.",scarcity_claims
+"High demand! 18 people are looking at this flight right now.",scarcity_claims
+"In high demand: 94% of rooms in this area are already booked.",scarcity_claims
+"Hurry, only 3 tickets remaining at this discounted price tier.",scarcity_claims
+"Low stock alert! We only have 4 pieces remaining in warehouse.",scarcity_claims
+"26 shoppers currently have this exact product in their cart.",scarcity_claims
+"Only 1 left in your selected size! Buy now.",scarcity_claims
+"Selling out fast! Over 500 people bought this in the past 24 hours.",scarcity_claims
+"Limited availability: Only 5 seats remaining for this departure.",scarcity_claims
+"Extremely high demand! 12 people booked this hotel today.",scarcity_claims
+"Just 2 units remaining in stock. Restock not planned.",scarcity_claims
+"Popular choice! Booked 4 times in the last hour.",scarcity_claims
+"Warning: Only 3 spaces left for this workshop.",scarcity_claims
+"Few items left! Don't let someone else buy your favorites.",scarcity_claims
+"Our warehouse is down to the final 2 boxes.",scarcity_claims
+"Over 80 people viewed this villa in the last 10 minutes.",scarcity_claims
+"Limited edition: final 4 pieces available worldwide.",scarcity_claims
+"Act now, only 1 ticket left at this special fare!",scarcity_claims
+"Supply is limited. Only 5 items available per customer.",scarcity_claims
+"No thanks, I hate saving money and prefer paying full price.",confirmshaming
+"No, I don't want a 20% discount on my first order.",confirmshaming
+"I prefer to stay broke and pay full retail value.",confirmshaming
+"No thanks, I don't care about saving our planet or eco-friendly shipping.",confirmshaming
+"No, I don't want free gifts, I hate surprises.",confirmshaming
+"No thanks, I don't want to look good or feel healthy.",confirmshaming
+"I'll pass on this deal because I don't like discounts.",confirmshaming
+"No, I don't want free shipping, I'd rather pay extra fees.",confirmshaming
+"No thanks, I don't care about protecting my family's identity.",confirmshaming
+"No, I don't need professional expert financial guidance.",confirmshaming
+"I don't like free rewards, keep the cash back.",confirmshaming
+"No thanks, I prefer struggling alone without helpful tips.",confirmshaming
+"No, I choose to remain uninformed and miss out on updates.",confirmshaming
+"I'll decline, I don't deserve this exclusive luxury offer.",confirmshaming
+"No thanks, I prefer paying extra for everything.",confirmshaming
+"No, I hate great deals and want to leave empty-handed.",confirmshaming
+"No thanks, I don't want silky smooth skin.",confirmshaming
+"No, I don't want to save $50 today on my purchase.",confirmshaming
+"No thanks, I don't like winning prizes.",confirmshaming
+"I decline to protect my device from dangerous malware.",confirmshaming
+"After free 7-day trial, your card will be automatically charged $49.99 every month.",forced_continuity
+"Renews automatically every year at $119.00 unless cancelled 48 hours prior.",forced_continuity
+"Subscription automatically converts to billed monthly membership at $29/mo.",forced_continuity
+"By clicking start trial, you enroll in auto-renewal at standard monthly rates.",forced_continuity
+"Continuous service membership: recurring charge billed on the 1st of each billing cycle.",forced_continuity
+"Your subscription will renew automatically every month until you cancel via phone support.",forced_continuity
+"Trial period ends in 14 days, followed by automated recurring billing of $39.99.",forced_continuity
+"Auto-renewal is active. Plan renews annually at prevailing retail rate without notice.",forced_continuity
+"Your payment method will be charged quarterly until termination is approved.",forced_continuity
+"Enrolled in automatic continuity program: billed $19.95 every 30 days.",forced_continuity
+"Auto-debit will continue automatically each calendar month.",forced_continuity
+"Recurring subscription fee of $14.99 will be automatically deducted every 4 weeks.",forced_continuity
+"Free trial automatically transitions into an annual binding contract.",forced_continuity
+"Your card will be billed recurring maintenance fees every billing quarter.",forced_continuity
+"Monthly service fee renews automatically unless written notice is received.",forced_continuity
+"Auto-charge authorized for recurring weekly installments.",forced_continuity
+"Subscription renews automatically at non-discounted rate of $79/month.",forced_continuity
+"Continuous enrollment: your card will be charged regular rate upon trial expiry.",forced_continuity
+"Auto-renewal terms: account will be automatically debited every 30 days.",forced_continuity
+"Recurring subscription fee applies automatically after the introductory period.",forced_continuity
+"Mandatory administrative processing fee of $6.50 added at checkout.",hidden_costs
+"Convenience fee of $4.99 applied to your order total.",hidden_costs
+"Late checkout surcharge: $8.50 service handling fee.",hidden_costs
+"Mandatory regulatory recovery fee of $3.25 added to order summary.",hidden_costs
+"Cart updated with $5.00 mandatory booking and ticketing fee.",hidden_costs
+"Delivery surcharge of $7.50 added to final step.",hidden_costs
+"Service facilitation charge: $4.50 automatically added.",hidden_costs
+"Unannounced handling surcharge: $3.99 billed at final review.",hidden_costs
+"Mandatory platform service fee of $2.99 included in checkout total.",hidden_costs
+"Surprise resort fee of $35.00 per night charged upon arrival.",hidden_costs
+"Cleaning and facility maintenance surcharge of $12.00 added.",hidden_costs
+"Payment processing convenience surcharge of $3.50 added to total.",hidden_costs
+"Luggage handling administrative surcharge of $8.00 applied.",hidden_costs
+"Mandatory gratuity and service fee of 18% automatically added.",hidden_costs
+"Peak hours checkout surcharge: $5.50 added to subtotal.",hidden_costs
+"Fulfillment and packaging fee of $4.25 appended to order.",hidden_costs
+"Merchant security transaction fee: $2.50 added to invoice.",hidden_costs
+"Discretionary service charge of $6.00 pre-selected on your bill.",hidden_costs
+"Mandatory event facility surcharge: $9.00 per ticket.",hidden_costs
+"Additional processing surcharge applied to electronic payment methods.",hidden_costs
+"Pre-checked checkbox: Add 2-year accidental damage protection for $19.99.",preselected_options
+"Preselected toggle: Automatically add expedited VIP priority processing for $4.99.",preselected_options
+"Checked by default: Donate $2.00 to our partner charity foundation.",preselected_options
+"Default opt-in: Send me daily promotional partner offers and SMS text alerts.",preselected_options
+"Pre-selected add-on: Include signature gift wrapping service for $5.00.",preselected_options
+"Default selection: Enroll me in recurring auto-delivery every 30 days for 10% off.",preselected_options
+"Pre-checked option: Add travel insurance policy to protect your itinerary for $28.",preselected_options
+"Default selection: Sign up for premium membership trial with auto-renew.",preselected_options
+"Pre-checked box: Yes, share my purchasing preferences with third-party advertising partners.",preselected_options
+"Preselected check: Add extended replacement guarantee for only $7.99.",preselected_options
+"Pre-checked toggle: Carbon offset donation of $1.50 added to cart.",preselected_options
+"Default opt-in: Upgrade to express courier priority dispatch for $6.99.",preselected_options
+"Pre-selected checkbox: Enroll in monthly mystery surprise crate program.",preselected_options
+"Checked by default: Receive automated marketing calls and commercial updates.",preselected_options
+"Pre-checked option: Add protective screen shield accessory for $12.00.",preselected_options
+"Default selection: Automatically restock every month at discounted price.",preselected_options
+"Pre-checked toggle: Include premium customer support tier for $3.99.",preselected_options
+"Default opt-in: Subscribe to sponsor newsletters and promotional discount announcements.",preselected_options
+"Pre-selected choice: Add luggage loss reimbursement coverage for $14.50.",preselected_options
+"Checked by default: Keep my card on file and authorize periodic marketing renewals.",preselected_options
+"Standard shipping takes 3-5 business days. Free returns within 30 days.",legitimate
+"Product details: 100% organic combed cotton, machine wash cold with like colors.",legitimate
+"Customer reviews: 4.8 out of 5 stars based on 320 verified customer purchases.",legitimate
+"Full refund guarantee if returned in original condition within 14 days of receipt.",legitimate
+"View sizing guide to find the perfect fit before placing your order.",legitimate
+"Frequently asked questions: How can I track my shipment and delivery status?",legitimate
+"Our customer care team is available Monday through Friday from 9am to 6pm.",legitimate
+"Subscribe to our monthly newsletter to receive genuine style inspiration.",legitimate
+"Clear pricing: $24.99 includes all applicable sales taxes and duties.",legitimate
+"One-time purchase only. No recurring charges or hidden subscriptions.",legitimate
+"Cancel anytime through your account settings page with a single click.",legitimate
+"Secure 256-bit SSL encrypted checkout powered by Stripe and PayPal.",legitimate
+"Dimensions: 15 inches height, 10 inches width, lightweight durable aluminum.",legitimate
+"Care instructions: Store in a cool dry place away from direct sunlight.",legitimate
+"Thank you for your order! Your receipt and tracking number have been sent to your email.",legitimate
+"Select your preferred delivery date and time window from the dropdown menu.",legitimate
+"Compare specifications across all available models in the table below.",legitimate
+"Ingredients: Purified water, aloe vera extract, chamomile, and vitamin E.",legitimate
+"Download the user manual and warranty documentation in PDF format.",legitimate
+"Our return policy allows hassle-free exchanges at any local retail store.",legitimate

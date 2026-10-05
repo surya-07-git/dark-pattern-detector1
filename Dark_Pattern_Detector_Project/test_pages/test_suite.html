@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Pattern Detector - Demonstration & Test Portal</title>
+  <style>
+    :root {
+      --bg: #0B0F19;
+      --card-bg: #1E293B;
+      --border: #334155;
+      --cyan: #06B6D4;
+      --emerald: #10B981;
+      --amber: #F59E0B;
+      --rose: #EF4444;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 36px 20px;
+    }
+    .container { max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+    
+    .header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #FFF;
+      letter-spacing: -0.5px;
+    }
+    .header h1 span { color: var(--cyan); }
+    .header p { color: var(--text-muted); font-size: 15px; max-width: 650px; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .demo-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+    .demo-card.positive { border-top: 4px solid var(--rose); }
+    .demo-card.negative { border-top: 4px solid var(--emerald); }
+
+    .card-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+    .tag-positive { background: rgba(239, 68, 68, 0.15); color: var(--rose); }
+    .tag-negative { background: rgba(16, 185, 129, 0.15); color: var(--emerald); }
+
+    .demo-card h2 { font-size: 20px; }
+    .demo-card p { font-size: 13.5px; color: var(--text-muted); }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-launch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      margin-top: auto;
+      transition: all 0.2s ease;
+    }
+    .btn-positive { background: var(--rose); color: #FFF; }
+    .btn-positive:hover { background: #DC2626; }
+    .btn-negative { background: var(--emerald); color: #FFF; }
+    .btn-negative:hover { background: #059669; }
+
+    .instruction-card {
+      background: #0F172A;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .instruction-card h3 { color: var(--cyan); font-size: 16px; }
+    .steps { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; color: #CBD5E1; }
+    code { background: #1E293B; padding: 2px 6px; border-radius: 4px; color: #38BDF8; font-family: monospace; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <header class="header">
+      <h1>Dark Pattern Detector <span>Test Portal</span></h1>
+      <p>Demonstration harness for evaluating the Manifest V3 browser extension and hybrid heuristic/ML detection engines across positive and negative scenarios.</p>
+    </header>
+
+    <div class="grid-2">
+      
+      <!-- POSITIVE BENCHMARK CARD -->
+      <div class="demo-card positive">
+        <span class="card-tag tag-positive">Manipulative Test Bench</span>
+        <h2>Positive Cases (Dark Patterns)</h2>
+        <p>A simulated modern e-commerce checkout page exhibiting all 6 manipulative patterns.</p>
+        
+        <ul class="feature-list">
+          <li>⏱️ <strong>False Urgency:</strong> Artificial ticking countdown timer</li>
+          <li>📦 <strong>Scarcity Claims:</strong> "Only 2 left" + real-time viewer ticker</li>
+          <li>😔 <strong>Confirmshaming:</strong> "No thanks, I hate saving money" opt-out</li>
+          <li>🔄 <strong>Forced Continuity:</strong> Fine-print auto-renewal streaming trap</li>
+          <li>💸 <strong>Hidden Costs:</strong> Surprise processing & convenience surcharges</li>
+          <li>☑️ <strong>Preselected Options:</strong> Pre-checked warranty & marketing boxes</li>
+        </ul>
+
+        <a href="positive_cases.html" target="_blank" class="btn-launch btn-positive">
+          Open Positive Test Page ↗
+        </a>
+      </div>
+
+      <!-- NEGATIVE CONTROL CARD -->
+      <div class="demo-card negative">
+        <span class="card-tag tag-negative">Ethical Benchmark</span>
+        <h2>Negative Cases (Clean Control)</h2>
+        <p>A legitimate, transparent e-commerce product listing verifying zero false positives.</p>
+        
+        <ul class="feature-list">
+          <li>✓ <strong>Transparent Pricing:</strong> All-inclusive price with no added surprise fees</li>
+          <li>✓ <strong>Ethical Opt-In:</strong> Optional gift wrap unchecked by default</li>
+          <li>✓ <strong>Respectful Copy:</strong> Clean "No thanks" dismiss button</li>
+          <li>✓ <strong>Clear Cancellation:</strong> 30-day 1-click refund policy</li>
+          <li>✓ <strong>Legitimate Terms:</strong> Standard required terms checkbox</li>
+          <li>✓ <strong>No False Urgency:</strong> Honest in-stock indicators without timers</li>
+        </ul>
+
+        <a href="negative_cases.html" target="_blank" class="btn-launch btn-negative">
+          Open Ethical Control Page ↗
+        </a>
+      </div>
+
+    </div>
+
+    <!-- QUICKSTART GUIDE FOR MANAGER PRESENTATION -->
+    <div class="instruction-card">
+      <h3>Quickstart: How to Load the Extension in Google Chrome</h3>
+      <ol class="steps">
+        <li>Open Google Chrome and navigate to <code>chrome://extensions/</code></li>
+        <li>Enable <strong>Developer mode</strong> using the toggle switch in the top-right corner.</li>
+        <li>Click the <strong>Load unpacked</strong> button in the top-left toolbar.</li>
+        <li>Select the directory: <code>c:\mini project\extension\</code></li>
+        <li>Open the <strong>Positive Cases</strong> link above. The extension badge will immediately illuminate with the number of detected dark patterns!</li>
+        <li>Click the extension shield icon to open the popup, filter by category, and click <strong>Inspect on Page</strong> to see non-destructive element highlighting.</li>
+      </ol>
+    </div>
+
+  </div>
+
+</body>
+</html>

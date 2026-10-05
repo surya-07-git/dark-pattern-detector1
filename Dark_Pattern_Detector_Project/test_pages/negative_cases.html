@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethical Commerce - Negative Control Test Page</title>
+  <style>
+    :root {
+      --primary: #059669;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text: #1E293B;
+      --border: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 24px;
+    }
+    .container { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+    
+    .status-banner {
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      color: #065F46;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 24px;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .stock-badge {
+      display: inline-flex;
+      background: #F1F5F9;
+      color: #475569;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 16px;
+      width: fit-content;
+    }
+
+    .product-title { font-size: 24px; font-weight: 800; }
+    .product-price { font-size: 28px; font-weight: 800; color: var(--primary); }
+
+    .terms-box {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 12px;
+      color: #64748B;
+    }
+
+    .addons-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+    .addon-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .cart-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      height: fit-content;
+    }
+    .cart-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #475569;
+    }
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text);
+      border-top: 2px solid var(--border);
+      padding-top: 10px;
+    }
+    .checkout-btn {
+      background: var(--primary);
+      color: #FFF;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .clean-modal {
+      background: #FFF;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .clean-modal-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-decline {
+      background: #F1F5F9;
+      color: #475569;
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .btn-accept {
+      background: var(--primary);
+      color: #FFF;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="status-banner">
+      <span>✓ Ethical Commerce Benchmark (Zero Dark Patterns Expected)</span>
+      <span>Control Group</span>
+    </div>
+
+    <div class="main-grid">
+      
+      <div class="product-card">
+        <div class="stock-badge">In Stock • Standard Delivery</div>
+
+        <h1 class="product-title">Nordic Minimalist Desk Lamp</h1>
+        <div class="product-price">$45.00</div>
+
+        <p style="color: #475569; font-size: 13px;">
+          Crafted with brushed matte aluminum and energy-efficient warm LED bulbs.
+          Includes 3-year standard manufacturer warranty at no extra charge.
+        </p>
+
+        <div class="terms-box">
+          <strong>Transparent Policy:</strong>
+          30-day full refund guarantee. Cancel or return anytime through your order history page with 1 click.
+        </div>
+
+        <!-- Ethical Form Options: Optional extras are UNCHECKED by default -->
+        <div class="addons-list">
+          <label class="addon-item">
+            <input type="checkbox" id="giftWrap" />
+            <div>
+              <strong>Optional Gift Wrapping ($3.00)</strong>
+              <p style="font-size: 11px; color: #64748B;">Recycled kraft paper and greeting card.</p>
+            </div>
+          </label>
+
+          <label class="addon-item">
+            <input type="checkbox" id="termsCheck" required />
+            <div>
+              <span>I agree to the <a href="#terms">Terms and Conditions</a> and Privacy Policy.</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="clean-modal">
+          <p style="font-size: 12px; font-weight: 600;">Optional Newsletter:</p>
+          <p style="font-size: 11px; color: #64748B;">Would you like our monthly design digest?</p>
+          <div class="clean-modal-buttons">
+            <button class="btn-accept">Subscribe</button>
+            <button class="btn-decline">No thanks</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Honest Checkout Summary: No surprise fees -->
+      <div class="cart-card">
+        <h3 style="font-size: 16px; font-weight: 700;">Cart Summary</h3>
+        
+        <div class="cart-row">
+          <span>Desk Lamp</span>
+          <span>$45.00</span>
+        </div>
+        <div class="cart-row">
+          <span>Standard Shipping</span>
+          <span>FREE</span>
+        </div>
+        <div class="cart-row">
+          <span>Estimated Sales Tax</span>
+          <span>$0.00</span>
+        </div>
+
+        <div class="cart-total">
+          <span>Total</span>
+          <span>$45.00</span>
+        </div>
+
+        <button class="checkout-btn">Proceed to Payment</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
